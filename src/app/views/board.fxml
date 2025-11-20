@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controllers.BoardController"
+            style="-fx-background-color: #0079bf;">
+    
+    <top>
+        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #026aa7; -fx-padding: 10;">
+            <Label text="Task Manager" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 0 20 0 10;" />
+            <Button fx:id="addTaskButton" text="+ Add Task" onAction="#onAddTaskClicked" 
+                    style="-fx-background-color: #5aac44; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="manageUsersButton" text="Manage Users" onAction="#onManageUsersClicked" 
+                    style="-fx-background-color: #ff9f1a; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" visible="false"/>
+            <Label fx:id="userInfoLabel" style="-fx-text-fill: white; -fx-padding: 0 10 0 0;"/>
+            <Button fx:id="logoutButton" text="Logout" onAction="#onLogoutClicked" 
+                    style="-fx-background-color: #eb5a46; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToHeight="true" hbarPolicy="AS_NEEDED" vbarPolicy="NEVER" style="-fx-background-color: transparent; -fx-background: transparent;">
+            <HBox spacing="15" alignment="TOP_LEFT" style="-fx-background-color: #0079bf;">
+                <padding>
+                    <Insets top="15" right="15" bottom="15" left="15"/>
+                </padding>
+                
+                <VBox fx:id="backlogColumn" spacing="10" minWidth="250" prefWidth="250" maxWidth="250" VBox.vgrow="ALWAYS">
+                    <Label text="Backlog" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10 0 5 0;"/>
+                </VBox>
+                
+                <VBox fx:id="todoColumn" spacing="10" minWidth="250" prefWidth="250" maxWidth="250" VBox.vgrow="ALWAYS">
+                    <Label text="To Do" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10 0 5 0;"/>
+                </VBox>
+                
+                <VBox fx:id="inProgressColumn" spacing="10" minWidth="250" prefWidth="250" maxWidth="250" VBox.vgrow="ALWAYS">
+                    <Label text="In Progress" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10 0 5 0;"/>
+                </VBox>
+                
+                <VBox fx:id="inReviewColumn" spacing="10" minWidth="250" prefWidth="250" maxWidth="250" VBox.vgrow="ALWAYS">
+                    <Label text="In Review" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10 0 5 0;"/>
+                </VBox>
+                
+                <VBox fx:id="waitingForRetestColumn" spacing="10" minWidth="250" prefWidth="250" maxWidth="250" VBox.vgrow="ALWAYS">
+                    <Label text="Waiting for Retest" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10 0 5 0;"/>
+                </VBox>
+                
+                <VBox fx:id="doneColumn" spacing="10" minWidth="250" prefWidth="250" maxWidth="250" VBox.vgrow="ALWAYS">
+                    <Label text="Done" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10 0 5 0;"/>
+                </VBox>
+            </HBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

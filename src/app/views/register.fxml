@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controllers.RegisterController"
+            style="-fx-background-color: #0079bf;">
+    
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 40;">
+            <padding>
+                <Insets top="40" right="40" bottom="40" left="40"/>
+            </padding>
+            
+            <Label text="Register" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            
+            <VBox spacing="15" style="-fx-min-width: 300;">
+                <VBox spacing="5">
+                    <Label text="Username:" style="-fx-font-weight: bold;"/>
+                    <TextField fx:id="usernameField" promptText="Enter username"/>
+                </VBox>
+                
+                <VBox spacing="5">
+                    <Label text="Password:" style="-fx-font-weight: bold;"/>
+                    <PasswordField fx:id="passwordField" promptText="Enter password"/>
+                </VBox>
+                
+                <VBox spacing="5">
+                    <Label text="Confirm Password:" style="-fx-font-weight: bold;"/>
+                    <PasswordField fx:id="confirmPasswordField" promptText="Confirm password"/>
+                </VBox>
+                
+                <Label fx:id="errorLabel" style="-fx-text-fill: red; -fx-wrap-text: true;" visible="false"/>
+                <Label fx:id="successLabel" style="-fx-text-fill: green; -fx-wrap-text: true;" visible="false"/>
+                
+                <Button text="Register" onAction="#onRegisterClicked" 
+                        style="-fx-background-color: #5aac44; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10; -fx-font-size: 14px;"/>
+                
+                <HBox alignment="CENTER" spacing="5">
+                    <Label text="Already have an account?"/>
+                    <Button text="Login" onAction="#onLoginClicked" 
+                            style="-fx-background-color: transparent; -fx-text-fill: #0079bf; -fx-underline: true; -fx-cursor: hand;"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
+
