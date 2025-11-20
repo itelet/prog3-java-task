@@ -2,6 +2,8 @@
 
 A projekt egy feladat menedzser applikációt készít el - hasonló a Trello, Monday. A UI JavaFX keretrendszer segítségével készült. Tesztelve Java SDK 25.0.1-en.
 
+A gallery mappában képek találhatóak az appról.
+
 A következő funkciókat tartalmazza:
 - Bejelentkezés
 - Regisztráció
@@ -23,7 +25,12 @@ Az applikáció indítása:
 - ```build-jar.bat``` futtatása
 - ```java --module-path "%PATH_TO_JAVA_FX_SDK_LIB%" --add-modules javafx.controls,javafx.fxml -jar dist\TaskManager.jar```
 
+A `users.json` tartalmaz egy felhasználót amivel tesztelhető a jogosultság kezelés:
+- username: admin
+- pw: admin
+
 ------
+
 
 
 Neptun kód: NX5JSL
